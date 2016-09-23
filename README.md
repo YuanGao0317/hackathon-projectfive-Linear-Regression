@@ -4,10 +4,10 @@ This is about what I did in our 3 days hackthon project which is a data visualiz
 
 The prediction line chart shows the relationship between two related features. It can be used to predict the value of y from the value of x. It reads a dataset, and, by implementing a normal equation, predicts the reasonable value of y based on the dataset. I used three standerd the Ruby classes, Matrix, Vector, and Rational.
 
-Model Selection
+###Model Selection
 A good model will give you a good prediction result. The two features(x, y) must have a linear relationship between them, because the equation is a linear equation.
 
-Algorithm Selection
+###Algorithm Selection
 I use a normal equation to calculate the reasonable y from x based on a dataset. I tried to implement a regression equation with a gradient descent function, but, in Ruby, it is difficult to implement the complex functions. Using a normal equation is not the best approach for prediction, but, in Ruby, it is efficient on implementation and I do not need to iterate the datasets myself. I found several Ruby classes(Matrix, Vector, Rational) which helps me to implement the equation. I wrote a class UniPre.rb which takes two arrays(x, y) which must be in the same order and gives you a optimal value(T) for prediction.
 
 The prediction function is:
