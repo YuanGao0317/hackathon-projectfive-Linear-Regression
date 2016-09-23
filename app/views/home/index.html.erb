@@ -1,0 +1,54 @@
+
+<%= stylesheet_link_tag 'test' %>
+
+<div id="file" data-file="<%= @filename %>"></div>
+<div class="jumbotron">
+  <h1>New York, visualized</h1>
+  <hr class="m-y-2">
+  <p class="lead">Now comparing <select name="first" class="splot dropdown-toggle"></select> and <select name="second" class="dropdown-toggle"></select> in this dataset.</p>
+</div>
+<!--
+<div class="row">
+  <%= form_tag("/display", method: "post") do %>
+  <div id="form-select">
+      <%= text_field_tag(:term1) %>
+      <%= text_field_tag(:term2) %>
+      <%= submit_tag("Discover") %>
+    <% end %>
+  </div>
+</div> -->
+
+<div class="row" align="center">
+</div>
+
+<div class="row"> 
+  <div id="tipsy-text"></div>
+  <div id="scatter-plot"></div>
+</div>
+
+<div class="row">
+  <div id="graphy">
+
+  </div>
+</div>
+
+
+<div id="numbers">
+
+</div>
+<div class="nav-away">
+
+  <a href="/bargraph" class="btn btn-primary btn-block"><h2>Go to bar graph</h2></a>
+
+</div>
+<!-- <%= javascript_include_tag "d3.v3.min.js" %> -->
+<%= javascript_include_tag 'scatter' %>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tipsy/1.0.3/jquery.tipsy.min.js"></script>
+
+<script type="text/javascript">
+</script>
+<div id='linechart'>
+  <svg> </svg>
+</div>

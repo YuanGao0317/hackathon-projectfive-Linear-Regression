@@ -1,0 +1,43 @@
+<%= stylesheet_link_tag "/assets/home.css" %>
+<%= stylesheet_link_tag "/assets/test.css" %>
+<header id="myheader" class="jumbotron">
+<div id="file" data-file="<%= @filename %>"></div>
+  <h1 id="toptop" style="font-size: 3.2em">New York, visualized</h1>
+  <hr class="m-y-2"/>
+  <p>Please choose your graph options: </p>
+
+  <%# for (var prop in window.restaurant_average_score) { %>
+    <%#   tmp = {}; %>
+    <%#   tmp['x'] = prop; %>
+    <%#   tmp['y'] = window.restaurant_average_score[prop]; %>
+    <%#   items.push(tmp); %>
+    <%# } %>
+    <%# <%= javascript_include_tag "https://d3js.org/d3.v4.min.js" %1> %>
+    <div class="row">
+      <form id="form1">
+        <select id="selecttype"  name="fname">
+          <%# <option value="Graffiti Complaints">Graffiti Complaints</option> %>
+          <%# <option value="Heating Complaints">Heating Complaints</option> %>
+          <%# <option value="Illegal Parking Complaints">Illegal Parking Complaints</option> %>
+          <%# <option value="Noise Complaints">Noise Complaints</option> %>
+          <%# <option value="Restaurant Average Score">Restaurant Average Score</option> %>
+          <%# <option value="Streetlight Complaints">Streetlight Complaints</option> %>
+          <%# <option value="Amount Of Trees">Amount Of Trees</option> %>
+        </select>
+        <select id="sorttype" name="typeofsort">
+          <%# <option value="zipcode">Sort by Zipcode</option> %>
+          <%# <option value="value">Sort by Value</option> %>
+        </select>
+        <button type="submit" form="form1" value="Submit" class="btn btn-primary">Click Me!</button>
+        <%= button_to "Refresh", { controller: "home",action: "bargraph" }, class:"btn btn-primary",  method: :get,  data: { confirm: "All your fancy graphs will be gone! Are you sure?" } %>
+      </form>
+    </div>
+  </header>
+
+
+<%= javascript_include_tag "d3.v3.min.js" %>
+
+<div id="graphy">
+
+</div>
+<div id="floatingbottom" style="position: fixed; bottom: 0; right: 0"></div>
