@@ -11,7 +11,7 @@ Algorithm Selection
 I use a normal equation to calculate the reasonable y from x based on a dataset. I tried to implement a regression equation with a gradient descent function, but, in Ruby, it is difficult to implement the complex functions. Using a normal equation is not the best approach for prediction, but, in Ruby, it is efficient on implementation and I do not need to iterate the datasets myself. I found several Ruby classes(Matrix, Vector, Rational) which helps me to implement the equation. I wrote a class UniPre.rb which takes two arrays(x, y) which must be in the same order and gives you a optimal value(T) for prediction.
 
 The prediction function is:
-￼
+￼![Normal Equation](https://github.com/YuanGao0317/hackathon-data-visualization/blob/master/app/assets/images/equation.png)
 
 X is the features of the training examples, y is the prediction vector of the training examples.
 
@@ -36,3 +36,11 @@ This is not the best equation. There are several ways to optimize it by changing
 Based on our datasets and time limitation, the prediction algorithms are good enough to show the information that I want. 
 
 There are two big challenges. One is that we all don’t know about D3 at that time, so it is not easy for us to implement it. Second is that I have to find a way to implement the algorithm, and test the prediction results.
+
+
+## Test
+1. bundle
+2. rake db:migrate or bunlde exec rake db:migrate
+3. rails s
+
+http://localhost:3000/linechart
