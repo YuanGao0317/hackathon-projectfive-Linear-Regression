@@ -44,3 +44,7 @@ There are two big challenges. One is that we all don’t know about D3 at that t
 3. rails s
 
 http://localhost:3000/linechart
+
+
+![1](https://github.com/YuanGao0317/hackathon-data-visualization/blob/master/ScreenShoot/Screenshot1.png)
+![2](https://github.com/YuanGao0317/hackathon-data-visualization/blob/master/ScreenShoot/Screenshot2.png)
